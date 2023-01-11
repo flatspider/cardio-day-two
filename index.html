@@ -33,6 +33,7 @@
         return currentYear - person.year >= 19;
     });
 
+    
     console.log("Is someone 19 or older:" + checkAge19some);
 
 
@@ -48,19 +49,30 @@
 
     // Array.prototype.find()
     // Find is like filter, but instead returns just the one you are looking for
-
-
     // find the comment with the ID of 823423
 
+    const findCommentID = comments.find(comment => {
+        
+        return comment.id === 823423;
+    });
+
+    console.log(findCommentID);
 
 
     // Array.prototype.findIndex()
     // Find the comment with this ID
 
-
-
+    const findID = comments.findIndex(comment => {
+        
+        return comment.id === 823423;
+    });
+    console.log(findID);
 
     // delete the comment with the ID of 823423
+
+    comments.splice(findID, 1);
+
+    console.log(comments);
 
   </script>
 </body>
